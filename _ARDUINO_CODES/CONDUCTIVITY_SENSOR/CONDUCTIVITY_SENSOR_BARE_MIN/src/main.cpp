@@ -24,6 +24,9 @@
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 32 // OLED display height, in pixels
 
+const int analogInPin = A0;  // ESP8266 Analog Pin ADC0 = A0
+int opt101_Value = 0;  // value read from the pot
+
 bool debug = false;
 
 String myI2CDevices[10];
@@ -455,55 +458,47 @@ void loop()
   //shutdown();
 
 
+//  ///////////Electrical conductivity test/////////////
+//   float DCs[Samplin_quantity];
 
-  ///////////////////OLD::::::::///////////////
-  // duration1 = pulseIn(ne555, HIGH); //Reads a pulse on ne555
-  // duration2 = pulseIn(ne555, LOW);
-
-  // Serial.println(duration1);
-  // Serial.println(duration2);
-
-  // dc = (duration1) / (duration1 + duration2) * 100;
-
-  // Serial.print("Duty cycle: ");
-  // Serial.print(dc); //print the length of the pulse on the seria monitor
-  // Serial.print(" %");
-  // Serial.println(); //print an blank on serial monitor
-  // Display_variables();
-  // delay(500);
-  // //wait for 500 microseconds
-
-  ///////////////////OLD::::::::///////////////
-
-  float DCs[Samplin_quantity];
-
-  for (size_t i = 0; i < Samplin_quantity; i++)
-  {
-    duration1 = pulseIn(ne555, HIGH); //Reads a pulse on ne555
-    duration2 = pulseIn(ne555, LOW);
+//   for (size_t i = 0; i < Samplin_quantity; i++)
+//   {
+//     duration1 = pulseIn(ne555, HIGH); //Reads a pulse on ne555
+//     duration2 = pulseIn(ne555, LOW);
 
 
-    dc = (duration1) / (duration1 + duration2) * 100;
+//     dc = (duration1) / (duration1 + duration2) * 100;
 
-    Serial.print("c,");
-    Serial.print(dc); //print the length of the pulse on the seria monitor
-    Serial.println(); //print an blank on serial monitor
-    Display_variables();
+//     Serial.print("c,");
+//     Serial.print(dc); //print the length of the pulse on the seria monitor
+//     Serial.println(); //print an blank on serial monitor
+//     Display_variables();
 
-    DCs[i] = dc;
-    delay(delay_between_sanples);
-  }
-  float average = 0;
-  float sum = 0;
-  for (size_t i = 0; i < Samplin_quantity; i++)
-  {
-    sum += DCs[i];
-  }
+//     DCs[i] = dc;
+//     delay(delay_between_sanples);
+//   }
+//   float average = 0;
+//   float sum = 0;
+//   for (size_t i = 0; i < Samplin_quantity; i++)
+//   {
+//     sum += DCs[i];
+//   }
 
-  average = sum / Samplin_quantity;
-  String val = String(average, 2);// using a float and the decimal places
-  String message = "d,";
-  message = message + val;
-  Serial.println(message);
-  delay(delay_between_round);
+//   average = sum / Samplin_quantity;
+//   String val = String(average, 2);// using a float and the decimal places
+//   String message = "d,";
+//   message = message + val;
+//   Serial.println(message);
+//   delay(delay_between_round);
+
+// ///////////Electrical conductivity test/////////////
+
+
+  //OPT101 value 
+  opt101_Value = analogRead(analogInPin);
+  Serial.println("o," + String(opt101_Value));
+  // message = "";
+  // message = "o,";
+  // message = message+ String(opt101_Value, 2);
+  // Serial.println(message);
 }

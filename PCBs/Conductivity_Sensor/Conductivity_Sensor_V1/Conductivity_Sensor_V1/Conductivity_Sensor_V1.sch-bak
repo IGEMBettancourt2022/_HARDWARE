@@ -234,21 +234,21 @@ Wire Notes Line
 $Comp
 L Connector_Generic:Conn_01x04 J6
 U 1 1 6265AF76
-P 12900 2100
-F 0 "J6" H 12980 2092 50  0000 L CNN
-F 1 "Screen connector" H 12980 2001 50  0000 L CNN
-F 2 "" H 12900 2100 50  0001 C CNN
-F 3 "~" H 12900 2100 50  0001 C CNN
-	1    12900 2100
+P 13050 4050
+F 0 "J6" H 13130 4042 50  0000 L CNN
+F 1 "Screen connector" H 13130 3951 50  0000 L CNN
+F 2 "" H 13050 4050 50  0001 C CNN
+F 3 "~" H 13050 4050 50  0001 C CNN
+	1    13050 4050
 	0    -1   -1   0   
 $EndComp
-Text GLabel 12800 2300 3    50   Input ~ 0
+Text GLabel 12950 4250 3    50   Input ~ 0
 GND
-Text GLabel 12900 2300 3    50   Input ~ 0
+Text GLabel 13050 4250 3    50   Input ~ 0
 REGULATED_5V+
-Text GLabel 13000 2300 3    50   Input ~ 0
+Text GLabel 13150 4250 3    50   Input ~ 0
 SCL
-Text GLabel 13100 2300 3    50   Input ~ 0
+Text GLabel 13250 4250 3    50   Input ~ 0
 SDA
 Text GLabel 2000 4650 2    50   Input ~ 0
 SCL
@@ -315,10 +315,10 @@ Connection ~ 3700 4450
 Wire Wire Line
 	3700 4450 3550 4450
 $Comp
-L Device:C C?
+L Device:C C3
 U 1 1 62664AC2
 P 7200 5650
-F 0 "C?" H 7315 5696 50  0000 L CNN
+F 0 "C3" H 7315 5696 50  0000 L CNN
 F 1 "C" H 7315 5605 50  0000 L CNN
 F 2 "" H 7238 5500 50  0001 C CNN
 F 3 "~" H 7200 5650 50  0001 C CNN
@@ -326,10 +326,10 @@ F 3 "~" H 7200 5650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:C C?
+L Device:C C4
 U 1 1 62665191
 P 7800 5600
-F 0 "C?" H 7915 5646 50  0000 L CNN
+F 0 "C4" H 7915 5646 50  0000 L CNN
 F 1 "C" H 7915 5555 50  0000 L CNN
 F 2 "" H 7838 5450 50  0001 C CNN
 F 3 "~" H 7800 5600 50  0001 C CNN
@@ -375,10 +375,10 @@ Wire Wire Line
 Wire Wire Line
 	9600 5050 9600 4800
 $Comp
-L Device:R R?
+L Device:R R5
 U 1 1 6266ED0E
 P 9600 4650
-F 0 "R?" H 9670 4696 50  0000 L CNN
+F 0 "R5" H 9670 4696 50  0000 L CNN
 F 1 "Resistor Divider" H 9670 4605 50  0000 L CNN
 F 2 "" V 9530 4650 50  0001 C CNN
 F 3 "~" H 9600 4650 50  0001 C CNN
@@ -417,4 +417,124 @@ Text GLabel 9050 4850 2    50   Input ~ 0
 555_out
 Text GLabel 2000 5450 2    50   Input ~ 0
 555_out
+Wire Notes Line
+	6100 3400 11900 3400
+Wire Notes Line
+	11900 3400 11900 6900
+Wire Notes Line
+	11900 6900 6100 6900
+Wire Notes Line
+	6100 6900 6100 3400
+Text Notes 6150 3300 0    50   ~ 0
+TIMER CIRCUIT
+$Comp
+L Connector:Jack-DC J7
+U 1 1 62676CB3
+P 7900 1550
+F 0 "J7" H 7957 1875 50  0000 C CNN
+F 1 "Jack-DC input" H 7957 1784 50  0000 C CNN
+F 2 "" H 7950 1510 50  0001 C CNN
+F 3 "~" H 7950 1510 50  0001 C CNN
+	1    7900 1550
+	1    0    0    -1  
+$EndComp
+Text GLabel 8200 1650 2    50   Input ~ 0
+GND
+Text GLabel 8200 1450 2    50   Input ~ 0
+V+_12V
+$Comp
+L Connector:Jack-DC J9
+U 1 1 62679176
+P 13450 2150
+F 0 "J9" H 13507 2475 50  0000 C CNN
+F 1 "Jack-DC output FOR DAISY CHAIN" H 13507 2384 50  0000 C CNN
+F 2 "" H 13500 2110 50  0001 C CNN
+F 3 "~" H 13500 2110 50  0001 C CNN
+	1    13450 2150
+	1    0    0    -1  
+$EndComp
+Text GLabel 13750 2250 2    50   Input ~ 0
+GND
+Text GLabel 13750 2050 2    50   Input ~ 0
+V+_12V
+$Comp
+L Connector_Generic:Conn_01x02 J8
+U 1 1 6267A54B
+P 10650 5350
+F 0 "J8" H 10730 5342 50  0000 L CNN
+F 1 "Conn_01x02" H 10730 5251 50  0000 L CNN
+F 2 "Connector_Coaxial:BNC_Amphenol_B6252HB-NPP3G-50_Horizontal" H 10650 5350 50  0001 C CNN
+F 3 "~" H 10650 5350 50  0001 C CNN
+	1    10650 5350
+	1    0    0    -1  
+$EndComp
+Text GLabel 10450 5450 0    50   Input ~ 0
+OUT1
+Text GLabel 10450 5350 0    50   Input ~ 0
+OUT2
+$Comp
+L Connector_Generic:Conn_01x06 J?
+U 1 1 6267E30A
+P 8500 7850
+F 0 "J?" V 8464 7462 50  0000 R CNN
+F 1 "Optical density connector" V 8373 7462 50  0000 R CNN
+F 2 "" H 8500 7850 50  0001 C CNN
+F 3 "~" H 8500 7850 50  0001 C CNN
+	1    8500 7850
+	0    -1   -1   0   
+$EndComp
+Text GLabel 8300 8050 3    50   Input ~ 0
+REGULATED_5V+
+Text GLabel 8400 8050 3    50   Input ~ 0
+GND
+Wire Wire Line
+	8500 8050 8500 8400
+$Comp
+L Device:R R?
+U 1 1 6268070A
+P 8500 8550
+F 0 "R?" H 8570 8596 50  0000 L CNN
+F 1 "1M ohm" H 8570 8505 50  0000 L CNN
+F 2 "" V 8430 8550 50  0001 C CNN
+F 3 "~" H 8500 8550 50  0001 C CNN
+	1    8500 8550
+	1    0    0    -1  
+$EndComp
+Text GLabel 1250 4550 0    50   Input ~ 0
+A0
+Text GLabel 8500 8950 3    50   Input ~ 0
+A0
+Wire Wire Line
+	8500 8700 8500 8800
+Wire Wire Line
+	8500 8800 8900 8800
+Wire Wire Line
+	8900 8800 8900 8350
+Wire Wire Line
+	8900 8350 8600 8350
+Wire Wire Line
+	8600 8350 8600 8050
+Connection ~ 8500 8800
+Wire Wire Line
+	8500 8800 8500 8950
+Wire Notes Line
+	6100 7150 11900 7150
+Wire Notes Line
+	11900 7150 11900 9700
+Wire Notes Line
+	11900 9700 6100 9700
+Wire Notes Line
+	6100 9700 6100 7150
+Text Notes 6150 7350 0    50   ~ 0
+OPTICAL DENSITY SENSOR
+Wire Notes Line
+	11200 2600 15700 2600
+Wire Notes Line
+	15700 2600 15700 700 
+Wire Notes Line
+	15700 700  11200 700 
+Wire Notes Line
+	11200 700  11200 2600
+Text Notes 11350 850  0    50   ~ 0
+OUPTUT
 $EndSCHEMATC

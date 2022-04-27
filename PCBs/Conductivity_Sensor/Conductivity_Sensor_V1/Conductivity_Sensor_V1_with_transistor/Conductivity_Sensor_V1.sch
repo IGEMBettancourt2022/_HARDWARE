@@ -25,23 +25,12 @@ F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 9150 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_Expansion:MCP23017_SP U1
-U 1 1 62642645
-P 4450 5150
-F 0 "U1" H 4300 6350 50  0000 C CNN
-F 1 "MCP23017_SP" H 4100 6250 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W7.62mm" H 4650 4150 50  0001 L CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 4650 4050 50  0001 L CNN
-	1    4450 5150
-	1    0    0    -1  
-$EndComp
-$Comp
 L ESP8266:Custom_LOLIN_V3 U2
 U 1 1 62643FD1
 P 1650 5200
 F 0 "U2" H 1625 6115 50  0000 C CNN
 F 1 "Custom_LOLIN_V3" H 1625 6024 50  0000 C CNN
-F 2 "" H 900 5850 50  0001 C CNN
+F 2 "ESP8266:NodeMCU-LoLinV3" H 900 5850 50  0001 C CNN
 F 3 "" H 900 5850 50  0001 C CNN
 	1    1650 5200
 	1    0    0    -1  
@@ -63,7 +52,7 @@ U 1 1 62645DD3
 P 1700 1600
 F 0 "C1" H 1815 1646 50  0000 L CNN
 F 1 "0.1µf" H 1815 1555 50  0000 L CNN
-F 2 "" H 1700 1600 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 1700 1600 50  0001 C CNN
 F 3 "~" H 1700 1600 50  0001 C CNN
 	1    1700 1600
 	1    0    0    -1  
@@ -74,7 +63,7 @@ U 1 1 62648DAA
 P 3050 1600
 F 0 "C2" H 3165 1646 50  0000 L CNN
 F 1 "1µf" H 3165 1555 50  0000 L CNN
-F 2 "" H 3050 1600 50  0001 C CNN
+F 2 "Capacitor_THT:CP_Radial_D5.0mm_P2.50mm" H 3050 1600 50  0001 C CNN
 F 3 "~" H 3050 1600 50  0001 C CNN
 	1    3050 1600
 	1    0    0    -1  
@@ -85,7 +74,7 @@ U 1 1 62649FC7
 P 2300 1950
 F 0 "R2" H 2370 1996 50  0000 L CNN
 F 1 "1.5K" H 2370 1905 50  0000 L CNN
-F 2 "" V 2230 1950 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2230 1950 50  0001 C CNN
 F 3 "~" H 2300 1950 50  0001 C CNN
 	1    2300 1950
 	1    0    0    -1  
@@ -96,7 +85,7 @@ U 1 1 6264A3E6
 P 2750 1650
 F 0 "R1" H 2820 1696 50  0000 L CNN
 F 1 "510" H 2820 1605 50  0000 L CNN
-F 2 "" V 2680 1650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 2680 1650 50  0001 C CNN
 F 3 "~" H 2750 1650 50  0001 C CNN
 	1    2750 1650
 	1    0    0    -1  
@@ -161,27 +150,12 @@ Wire Notes Line
 Text Notes 5250 950  0    50   ~ 0
 INPUTS
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J1
-U 1 1 62653DD9
-P 6300 1700
-F 0 "J1" H 6350 2017 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 6350 1926 50  0000 C CNN
-F 2 "" H 6300 1700 50  0001 C CNN
-F 3 "~" H 6300 1700 50  0001 C CNN
-	1    6300 1700
-	1    0    0    -1  
-$EndComp
-Text GLabel 6600 1600 2    50   Input ~ 0
-GND
-Text GLabel 6100 1600 0    50   Input ~ 0
-V+_12V
-$Comp
 L Connector_Generic:Conn_01x01 J2
 U 1 1 6265527E
 P 3500 2300
 F 0 "J2" V 3372 2380 50  0000 L CNN
 F 1 "Test pad 5v+" V 3463 2380 50  0000 L CNN
-F 2 "" H 3500 2300 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 3500 2300 50  0001 C CNN
 F 3 "~" H 3500 2300 50  0001 C CNN
 	1    3500 2300
 	0    1    1    0   
@@ -192,7 +166,7 @@ U 1 1 62656342
 P 4150 2300
 F 0 "J3" V 4022 2380 50  0000 L CNN
 F 1 "Test pad GND" V 4113 2380 50  0000 L CNN
-F 2 "" H 4150 2300 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 4150 2300 50  0001 C CNN
 F 3 "~" H 4150 2300 50  0001 C CNN
 	1    4150 2300
 	0    1    1    0   
@@ -207,7 +181,7 @@ U 1 1 62657918
 P 5550 2400
 F 0 "J4" V 5422 2480 50  0000 L CNN
 F 1 "Test pad 12v+" V 5513 2480 50  0000 L CNN
-F 2 "" H 5550 2400 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 5550 2400 50  0001 C CNN
 F 3 "~" H 5550 2400 50  0001 C CNN
 	1    5550 2400
 	0    1    1    0   
@@ -218,7 +192,7 @@ U 1 1 6265791E
 P 6450 2400
 F 0 "J5" V 6322 2480 50  0000 L CNN
 F 1 "Test pad GND" V 6413 2480 50  0000 L CNN
-F 2 "" H 6450 2400 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 6450 2400 50  0001 C CNN
 F 3 "~" H 6450 2400 50  0001 C CNN
 	1    6450 2400
 	0    1    1    0   
@@ -237,7 +211,7 @@ U 1 1 6265AF76
 P 12950 1550
 F 0 "J6" H 13030 1542 50  0000 L CNN
 F 1 "Screen connector" H 13030 1451 50  0000 L CNN
-F 2 "" H 12950 1550 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 12950 1550 50  0001 C CNN
 F 3 "~" H 12950 1550 50  0001 C CNN
 	1    12950 1550
 	0    -1   -1   0   
@@ -258,69 +232,13 @@ Text GLabel 1250 5950 0    50   Input ~ 0
 REGULATED_5V+
 Text GLabel 1250 5850 0    50   Input ~ 0
 GND
-Text GLabel 3750 5950 0    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 3750 5850 0    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 3750 5750 0    50   Input ~ 0
-GND
-Text GLabel 3750 5250 0    50   Input ~ 0
-REGULATED_5V+
-Wire Wire Line
-	3750 4450 3700 4450
-Wire Wire Line
-	3750 4350 3700 4350
-$Comp
-L Device:R R4
-U 1 1 62661B0A
-P 3400 4450
-F 0 "R4" V 3607 4450 50  0000 C CNN
-F 1 "10K" V 3516 4450 50  0000 C CNN
-F 2 "" V 3330 4450 50  0001 C CNN
-F 3 "~" H 3400 4450 50  0001 C CNN
-	1    3400 4450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 62661FCA
-P 3400 4350
-F 0 "R3" V 3193 4350 50  0000 C CNN
-F 1 "10K" V 3284 4350 50  0000 C CNN
-F 2 "" V 3330 4350 50  0001 C CNN
-F 3 "~" H 3400 4350 50  0001 C CNN
-	1    3400 4350
-	0    1    1    0   
-$EndComp
-Text GLabel 3250 4450 0    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 3250 4350 0    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 4450 4050 1    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 4450 6250 3    50   Input ~ 0
-GND
-Text GLabel 3700 4200 1    50   Input ~ 0
-SDA
-Text GLabel 3700 4600 3    50   Input ~ 0
-SCL
-Wire Wire Line
-	3700 4200 3700 4350
-Connection ~ 3700 4350
-Wire Wire Line
-	3700 4350 3550 4350
-Wire Wire Line
-	3700 4600 3700 4450
-Connection ~ 3700 4450
-Wire Wire Line
-	3700 4450 3550 4450
 $Comp
 L Device:C C3
 U 1 1 62664AC2
 P 7200 5650
 F 0 "C3" H 7315 5696 50  0000 L CNN
 F 1 "C" H 7315 5605 50  0000 L CNN
-F 2 "" H 7238 5500 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 7238 5500 50  0001 C CNN
 F 3 "~" H 7200 5650 50  0001 C CNN
 	1    7200 5650
 	1    0    0    -1  
@@ -331,7 +249,7 @@ U 1 1 62665191
 P 7800 5600
 F 0 "C4" H 7915 5646 50  0000 L CNN
 F 1 "C" H 7915 5555 50  0000 L CNN
-F 2 "" H 7838 5450 50  0001 C CNN
+F 2 "Capacitor_THT:C_Disc_D3.4mm_W2.1mm_P2.50mm" H 7838 5450 50  0001 C CNN
 F 3 "~" H 7800 5600 50  0001 C CNN
 	1    7800 5600
 	1    0    0    -1  
@@ -378,7 +296,7 @@ U 1 1 6266ED0E
 P 9600 4650
 F 0 "R5" H 9670 4696 50  0000 L CNN
 F 1 "Resistor Divider" H 9670 4605 50  0000 L CNN
-F 2 "" V 9530 4650 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 9530 4650 50  0001 C CNN
 F 3 "~" H 9600 4650 50  0001 C CNN
 	1    9600 4650
 	1    0    0    -1  
@@ -431,7 +349,7 @@ U 1 1 62676CB3
 P 7900 1550
 F 0 "J7" H 7957 1875 50  0000 C CNN
 F 1 "Jack-DC input" H 7957 1784 50  0000 C CNN
-F 2 "" H 7950 1510 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 7950 1510 50  0001 C CNN
 F 3 "~" H 7950 1510 50  0001 C CNN
 	1    7900 1550
 	1    0    0    -1  
@@ -446,7 +364,7 @@ U 1 1 62679176
 P 11800 2250
 F 0 "J9" H 11857 2575 50  0000 C CNN
 F 1 "Jack-DC output FOR DAISY CHAIN" H 11857 2484 50  0000 C CNN
-F 2 "" H 11850 2210 50  0001 C CNN
+F 2 "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal" H 11850 2210 50  0001 C CNN
 F 3 "~" H 11850 2210 50  0001 C CNN
 	1    11800 2250
 	1    0    0    -1  
@@ -471,12 +389,12 @@ OUT1
 Text GLabel 10450 5350 0    50   Input ~ 0
 OUT2
 $Comp
-L Connector_Generic:Conn_01x06 J?
+L Connector_Generic:Conn_01x06 J10
 U 1 1 6267E30A
 P 8500 7850
-F 0 "J?" V 8464 7462 50  0000 R CNN
+F 0 "J10" V 8464 7462 50  0000 R CNN
 F 1 "Optical density connector" V 8373 7462 50  0000 R CNN
-F 2 "" H 8500 7850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x06_P2.54mm_Vertical" H 8500 7850 50  0001 C CNN
 F 3 "~" H 8500 7850 50  0001 C CNN
 	1    8500 7850
 	0    -1   -1   0   
@@ -488,12 +406,12 @@ GND
 Wire Wire Line
 	8500 8050 8500 8400
 $Comp
-L Device:R R?
+L Device:R R6
 U 1 1 6268070A
 P 8500 8550
-F 0 "R?" H 8570 8596 50  0000 L CNN
+F 0 "R6" H 8570 8596 50  0000 L CNN
 F 1 "1M ohm" H 8570 8505 50  0000 L CNN
-F 2 "" V 8430 8550 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 8430 8550 50  0001 C CNN
 F 3 "~" H 8500 8550 50  0001 C CNN
 	1    8500 8550
 	1    0    0    -1  
@@ -536,10 +454,10 @@ Wire Notes Line
 Text Notes 11350 850  0    50   ~ 0
 OUPTUT
 $Comp
-L Transistor_BJT:2N3904 Q?
+L Transistor_BJT:2N3904 Q1
 U 1 1 6269A9B7
 P 10700 5950
-F 0 "Q?" V 11028 5950 50  0000 C CNN
+F 0 "Q1" V 11028 5950 50  0000 C CNN
 F 1 "2N3904" V 10937 5950 50  0000 C CNN
 F 2 "Package_TO_SOT_THT:TO-92_Inline" H 10900 5875 50  0001 L CIN
 F 3 "https://www.onsemi.com/pub/Collateral/2N3903-D.PDF" H 10700 5950 50  0001 L CNN
@@ -549,12 +467,12 @@ $EndComp
 Wire Wire Line
 	10700 6150 10700 6300
 $Comp
-L Device:R R?
+L Device:R R7
 U 1 1 626A1797
 P 10700 6450
-F 0 "R?" H 10770 6496 50  0000 L CNN
+F 0 "R7" H 10770 6496 50  0000 L CNN
 F 1 "1.0K" H 10770 6405 50  0000 L CNN
-F 2 "" V 10630 6450 50  0001 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 10630 6450 50  0001 C CNN
 F 3 "~" H 10700 6450 50  0001 C CNN
 	1    10700 6450
 	1    0    0    -1  
@@ -568,12 +486,12 @@ Transistor_Control
 Text GLabel 2000 4850 2    50   Input ~ 0
 Transistor_Control
 $Comp
-L Connector_Generic:Conn_02x02_Top_Bottom J?
+L Connector_Generic:Conn_02x02_Top_Bottom J11
 U 1 1 6269AC00
 P 10100 5850
-F 0 "J?" H 10150 6067 50  0000 C CNN
+F 0 "J11" H 10150 6067 50  0000 C CNN
 F 1 "Conn_02x02_Top_Bottom" H 10150 5976 50  0000 C CNN
-F 2 "" H 10100 5850 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x02_P2.54mm_Vertical" H 10100 5850 50  0001 C CNN
 F 3 "~" H 10100 5850 50  0001 C CNN
 	1    10100 5850
 	1    0    0    -1  
@@ -611,12 +529,12 @@ LED5
 Text GLabel 1250 4950 0    50   Input ~ 0
 LED6
 $Comp
-L Connector_Generic:Conn_02x04_Counter_Clockwise J?
+L Connector_Generic:Conn_02x04_Counter_Clockwise J12
 U 1 1 626B5FFC
 P 14600 2150
-F 0 "J?" H 14650 2467 50  0000 C CNN
+F 0 "J12" H 14650 2467 50  0000 C CNN
 F 1 "Conn_02x04_Counter_Clockwise" H 14650 2376 50  0000 C CNN
-F 2 "" H 14600 2150 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x04_P2.54mm_Horizontal" H 14600 2150 50  0001 C CNN
 F 3 "~" H 14600 2150 50  0001 C CNN
 	1    14600 2150
 	1    0    0    -1  
@@ -635,4 +553,30 @@ Text GLabel 14900 2250 2    50   Input ~ 0
 LED6
 Text GLabel 14900 2150 2    50   Input ~ 0
 GND
+$Comp
+L Connector_Generic:Conn_01x01 J13
+U 1 1 626B2C5C
+P 11000 4550
+F 0 "J13" V 10872 4630 50  0000 L CNN
+F 1 "Solder lead 2" V 10963 4630 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 11000 4550 50  0001 C CNN
+F 3 "~" H 11000 4550 50  0001 C CNN
+	1    11000 4550
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x01 J14
+U 1 1 626B34AE
+P 11000 5000
+F 0 "J14" V 10872 5080 50  0000 L CNN
+F 1 "Solder lead 1" V 10963 5080 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 11000 5000 50  0001 C CNN
+F 3 "~" H 11000 5000 50  0001 C CNN
+	1    11000 5000
+	0    -1   -1   0   
+$EndComp
+Text GLabel 11000 5200 2    50   Input ~ 0
+OUT2
+Text GLabel 11000 4750 2    50   Input ~ 0
+OUT1
 $EndSCHEMATC

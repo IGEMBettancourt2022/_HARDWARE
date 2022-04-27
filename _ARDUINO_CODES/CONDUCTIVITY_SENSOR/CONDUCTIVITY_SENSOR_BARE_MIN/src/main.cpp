@@ -24,8 +24,8 @@
 #define SCREEN_WIDTH 128 // OLED display width, in pixels
 #define SCREEN_HEIGHT 32 // OLED display height, in pixels
 
-const int analogInPin = A0;  // ESP8266 Analog Pin ADC0 = A0
-int opt101_Value = 0;  // value read from the pot
+const int analogInPin = A0; // ESP8266 Analog Pin ADC0 = A0
+int opt101_Value = 0;       // value read from the pot
 
 bool debug = false;
 
@@ -44,12 +44,17 @@ int ne555 = 13; //attach to the third pin of NE555
 // unsigned long duration2; //the variable to store the HIGH length of the pulse
 // unsigned long dc;                //the variable to store the duty cycle
 
+bool light_sensor_on = false;
+bool timer_sensing_on = true;
+
+int transistor_pin = 0;
+
 float duration1; //the variable to store the HIGH length of the pulse
 float duration2; //the variable to store the HIGH length of the pulse
 float dc;
 int Samplin_quantity = 10;
 int delay_between_sanples = 500;
-int delay_between_round = 2000;
+int delay_between_round = 1000;
 
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 #define OLED_RESET -1 // Reset pin # (or -1 if sharing Arduino reset pin)
@@ -440,9 +445,8 @@ void setup()
   //printNetwork("Hello_from_ESP");
   delay(100);
 
-
   pinMode(ne555, INPUT); //set the ne555 as an input
-
+  pinMode(transistor_pin, OUTPUT);
   Serial.println("init");
 }
 
@@ -457,48 +461,60 @@ void loop()
   //networkTerminal();
   //shutdown();
 
+  // digitalWrite(transistor_pin, HIGH);
+  // delay(1000);
+  // digitalWrite(transistor_pin, LOW);
+  // delay(1000);
 
-//  ///////////Electrical conductivity test/////////////
-//   float DCs[Samplin_quantity];
+  if (timer_sensing_on)
+  {
+    ///////////Electrical conductivity test/////////////
+    float DCs[Samplin_quantity];
+    digitalWrite(transistor_pin, HIGH);
+    Serial.println("transistor ON");
+    delay(2000);
+    for (size_t i = 0; i < Samplin_quantity; i++)
+    {
+      duration1 = pulseIn(ne555, HIGH); //Reads a pulse on ne555
+      duration2 = pulseIn(ne555, LOW);
 
-//   for (size_t i = 0; i < Samplin_quantity; i++)
-//   {
-//     duration1 = pulseIn(ne555, HIGH); //Reads a pulse on ne555
-//     duration2 = pulseIn(ne555, LOW);
+      dc = (duration1) / (duration1 + duration2) * 100;
 
+      Serial.print("c,");
+      Serial.print(dc); //print the length of the pulse on the seria monitor
+      Serial.println(); //print an blank on serial monitor
+      Display_variables();
 
-//     dc = (duration1) / (duration1 + duration2) * 100;
+      DCs[i] = dc;
+      delay(delay_between_sanples);
+    }
+    float average = 0;
+    float sum = 0;
+    for (size_t i = 0; i < Samplin_quantity; i++)
+    {
+      sum += DCs[i];
+    }
 
-//     Serial.print("c,");
-//     Serial.print(dc); //print the length of the pulse on the seria monitor
-//     Serial.println(); //print an blank on serial monitor
-//     Display_variables();
+    average = sum / Samplin_quantity;
+    String val = String(average, 2); // using a float and the decimal places
+    String message = "d,";
+    message = message + val;
+    Serial.println(message);
+    Serial.println("transistor OFF");
+    digitalWrite(transistor_pin, LOW);
+    delay(delay_between_round);
+  }
 
-//     DCs[i] = dc;
-//     delay(delay_between_sanples);
-//   }
-//   float average = 0;
-//   float sum = 0;
-//   for (size_t i = 0; i < Samplin_quantity; i++)
-//   {
-//     sum += DCs[i];
-//   }
+  if (light_sensor_on)
+  {
+    // ///////////Electrical conductivity test/////////////
 
-//   average = sum / Samplin_quantity;
-//   String val = String(average, 2);// using a float and the decimal places
-//   String message = "d,";
-//   message = message + val;
-//   Serial.println(message);
-//   delay(delay_between_round);
-
-// ///////////Electrical conductivity test/////////////
-
-
-  //OPT101 value 
-  opt101_Value = analogRead(analogInPin);
-  Serial.println("o," + String(opt101_Value));
-  // message = "";
-  // message = "o,";
-  // message = message+ String(opt101_Value, 2);
-  // Serial.println(message);
+    //OPT101 value
+    opt101_Value = analogRead(analogInPin);
+    Serial.println("o," + String(opt101_Value));
+    // message = "";
+    // message = "o,";
+    // message = message+ String(opt101_Value, 2);
+    // Serial.println(message);
+  }
 }

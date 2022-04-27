@@ -1,0 +1,240 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A3 16535 11693
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 14450 2350 2    50   Input ~ 0
+LED6
+Text GLabel 14450 2450 2    50   Input ~ 0
+LED5
+Text GLabel 13950 2450 0    50   Input ~ 0
+LED4
+Text GLabel 13950 2350 0    50   Input ~ 0
+LED3
+Text GLabel 13950 2250 0    50   Input ~ 0
+LED2
+Text GLabel 13950 2150 0    50   Input ~ 0
+LED1
+$Comp
+L Device:R R1
+U 1 1 6269D281
+P 10250 3350
+F 0 "R1" H 10320 3396 50  0000 L CNN
+F 1 "330" H 10320 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 10180 3350 50  0001 C CNN
+F 3 "~" H 10250 3350 50  0001 C CNN
+	1    10250 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 6269DE38
+P 10250 2900
+F 0 "D1" V 10289 2782 50  0000 R CNN
+F 1 "LED" V 10198 2782 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 10250 2900 50  0001 C CNN
+F 3 "~" H 10250 2900 50  0001 C CNN
+	1    10250 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10250 3050 10250 3200
+Wire Wire Line
+	10250 3500 10250 3800
+Wire Wire Line
+	10250 2750 10250 2550
+Text GLabel 10250 2550 1    50   Input ~ 0
+LED1
+$Comp
+L Device:R R2
+U 1 1 626A023C
+P 10700 3350
+F 0 "R2" H 10770 3396 50  0000 L CNN
+F 1 "330" H 10770 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 10630 3350 50  0001 C CNN
+F 3 "~" H 10700 3350 50  0001 C CNN
+	1    10700 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 626A0242
+P 10700 2900
+F 0 "D2" V 10739 2782 50  0000 R CNN
+F 1 "LED" V 10648 2782 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 10700 2900 50  0001 C CNN
+F 3 "~" H 10700 2900 50  0001 C CNN
+	1    10700 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10700 3050 10700 3200
+Wire Wire Line
+	10700 3500 10700 3800
+Wire Wire Line
+	10700 2750 10700 2550
+$Comp
+L Device:R R3
+U 1 1 626A16B3
+P 11200 3350
+F 0 "R3" H 11270 3396 50  0000 L CNN
+F 1 "330" H 11270 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 11130 3350 50  0001 C CNN
+F 3 "~" H 11200 3350 50  0001 C CNN
+	1    11200 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 626A16B9
+P 11200 2900
+F 0 "D3" V 11239 2782 50  0000 R CNN
+F 1 "LED" V 11148 2782 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 11200 2900 50  0001 C CNN
+F 3 "~" H 11200 2900 50  0001 C CNN
+	1    11200 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11200 3050 11200 3200
+Wire Wire Line
+	11200 3500 11200 3800
+Wire Wire Line
+	11200 2750 11200 2550
+$Comp
+L Device:R R4
+U 1 1 626A16C3
+P 11650 3350
+F 0 "R4" H 11720 3396 50  0000 L CNN
+F 1 "330" H 11720 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 11580 3350 50  0001 C CNN
+F 3 "~" H 11650 3350 50  0001 C CNN
+	1    11650 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D4
+U 1 1 626A16C9
+P 11650 2900
+F 0 "D4" V 11689 2782 50  0000 R CNN
+F 1 "LED" V 11598 2782 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 11650 2900 50  0001 C CNN
+F 3 "~" H 11650 2900 50  0001 C CNN
+	1    11650 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	11650 3050 11650 3200
+Wire Wire Line
+	11650 3500 11650 3800
+Wire Wire Line
+	11650 2750 11650 2550
+$Comp
+L Device:R R5
+U 1 1 626A2FE5
+P 12050 3350
+F 0 "R5" H 12120 3396 50  0000 L CNN
+F 1 "330" H 12120 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 11980 3350 50  0001 C CNN
+F 3 "~" H 12050 3350 50  0001 C CNN
+	1    12050 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D5
+U 1 1 626A2FEB
+P 12050 2900
+F 0 "D5" V 12089 2782 50  0000 R CNN
+F 1 "LED" V 11998 2782 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 12050 2900 50  0001 C CNN
+F 3 "~" H 12050 2900 50  0001 C CNN
+	1    12050 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12050 3050 12050 3200
+Wire Wire Line
+	12050 3500 12050 3800
+Wire Wire Line
+	12050 2750 12050 2550
+$Comp
+L Device:R R6
+U 1 1 626A2FF5
+P 12500 3350
+F 0 "R6" H 12570 3396 50  0000 L CNN
+F 1 "330" H 12570 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 12430 3350 50  0001 C CNN
+F 3 "~" H 12500 3350 50  0001 C CNN
+	1    12500 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D6
+U 1 1 626A2FFB
+P 12500 2900
+F 0 "D6" V 12539 2782 50  0000 R CNN
+F 1 "LED" V 12448 2782 50  0000 R CNN
+F 2 "LED_THT:LED_D5.0mm_IRGrey" H 12500 2900 50  0001 C CNN
+F 3 "~" H 12500 2900 50  0001 C CNN
+	1    12500 2900
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	12500 3050 12500 3200
+Wire Wire Line
+	12500 3500 12500 3800
+Wire Wire Line
+	12500 2750 12500 2550
+Text GLabel 10700 2550 1    50   Input ~ 0
+LED2
+Text GLabel 11200 2550 1    50   Input ~ 0
+LED3
+Text GLabel 11650 2550 1    50   Input ~ 0
+LED4
+Text GLabel 12050 2550 1    50   Input ~ 0
+LED5
+Text GLabel 12500 2550 1    50   Input ~ 0
+LED6
+Wire Wire Line
+	10250 3800 10700 3800
+Connection ~ 10700 3800
+Wire Wire Line
+	10700 3800 11200 3800
+Connection ~ 11200 3800
+Wire Wire Line
+	11200 3800 11650 3800
+Connection ~ 11650 3800
+Wire Wire Line
+	11650 3800 12050 3800
+Connection ~ 12050 3800
+Wire Wire Line
+	12050 3800 12500 3800
+Connection ~ 12500 3800
+Wire Wire Line
+	12500 3800 13250 3800
+$Comp
+L Connector_Generic:Conn_02x04_Counter_Clockwise J1
+U 1 1 626A3F6B
+P 14150 2250
+F 0 "J1" H 14200 2567 50  0000 C CNN
+F 1 "Conn_02x04_Counter_Clockwise" H 14200 2476 50  0000 C CNN
+F 2 "Connector_IDC:IDC-Header_2x04_P2.54mm_Horizontal" H 14150 2250 50  0001 C CNN
+F 3 "~" H 14150 2250 50  0001 C CNN
+	1    14150 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 14450 2250 2    50   Input ~ 0
+GND
+Text GLabel 13250 3800 2    50   Input ~ 0
+GND
+$EndSCHEMATC

@@ -14,18 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 $Comp
-L Timer:NE555P U3
-U 1 1 62641A0C
-P 8300 5050
-F 0 "U3" H 8450 5650 50  0000 C CNN
-F 1 "NE555P" H 8500 5500 50  0000 C CNN
-F 2 "Package_DIP:DIP-8_W7.62mm" H 8950 4650 50  0001 C CNN
-F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 9150 4650 50  0001 C CNN
-	1    8300 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L ESP8266:Custom_LOLIN_V3 U2
+L Conductivity_Sensor_V1-rescue:Custom_LOLIN_V3-ESP8266 U2
 U 1 1 62643FD1
 P 1650 5200
 F 0 "U2" H 1625 6115 50  0000 C CNN
@@ -160,21 +149,8 @@ F 3 "~" H 3500 2300 50  0001 C CNN
 	1    3500 2300
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x01 J3
-U 1 1 62656342
-P 4150 2300
-F 0 "J3" V 4022 2380 50  0000 L CNN
-F 1 "Test pad GND" V 4113 2380 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 4150 2300 50  0001 C CNN
-F 3 "~" H 4150 2300 50  0001 C CNN
-	1    4150 2300
-	0    1    1    0   
-$EndComp
 Text GLabel 3500 2100 1    50   Input ~ 0
 REGULATED_5V+
-Text GLabel 4150 2100 1    50   Input ~ 0
-GND
 $Comp
 L Connector_Generic:Conn_01x01 J4
 U 1 1 62657918
@@ -499,8 +475,6 @@ $EndComp
 Wire Wire Line
 	10400 5850 10500 5850
 Wire Wire Line
-	9900 5950 10400 5950
-Wire Wire Line
 	9600 5850 9600 5950
 Wire Wire Line
 	9600 5950 9900 5950
@@ -509,13 +483,8 @@ Wire Wire Line
 Connection ~ 9600 5850
 Wire Wire Line
 	9600 5850 9900 5850
-Connection ~ 9900 5950
 Text GLabel 10400 5950 3    50   Input ~ 0
 OUT1
-Wire Wire Line
-	9900 5850 10400 5850
-Connection ~ 9900 5850
-Connection ~ 10400 5850
 Text GLabel 2000 4950 2    50   Input ~ 0
 LED1
 Text GLabel 2000 5250 2    50   Input ~ 0
@@ -579,4 +548,28 @@ Text GLabel 11000 5200 2    50   Input ~ 0
 OUT2
 Text GLabel 11000 4750 2    50   Input ~ 0
 OUT1
+Text GLabel 4150 2100 1    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x01 J3
+U 1 1 62656342
+P 4150 2300
+F 0 "J3" V 4022 2380 50  0000 L CNN
+F 1 "Test pad GND" V 4113 2380 50  0000 L CNN
+F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 4150 2300 50  0001 C CNN
+F 3 "~" H 4150 2300 50  0001 C CNN
+	1    4150 2300
+	0    1    1    0   
+$EndComp
+$Comp
+L Timer:NE555P U3
+U 1 1 62641A0C
+P 8300 5050
+F 0 "U3" H 8450 5650 50  0000 C CNN
+F 1 "NE555P" H 8500 5500 50  0000 C CNN
+F 2 "Package_DIP:DIP-8_W7.62mm" H 8950 4650 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 9150 4650 50  0001 C CNN
+	1    8300 5050
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

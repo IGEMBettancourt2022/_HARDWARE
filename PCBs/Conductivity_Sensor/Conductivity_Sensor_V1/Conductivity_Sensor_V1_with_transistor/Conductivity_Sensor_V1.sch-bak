@@ -25,18 +25,7 @@ F 3 "http://www.ti.com/lit/ds/symlink/ne555.pdf" H 9150 4650 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Interface_Expansion:MCP23017_SP U1
-U 1 1 62642645
-P 4450 5150
-F 0 "U1" H 4300 6350 50  0000 C CNN
-F 1 "MCP23017_SP" H 4100 6250 50  0000 C CNN
-F 2 "Package_DIP:DIP-28_W7.62mm" H 4650 4150 50  0001 L CNN
-F 3 "http://ww1.microchip.com/downloads/en/DeviceDoc/20001952C.pdf" H 4650 4050 50  0001 L CNN
-	1    4450 5150
-	1    0    0    -1  
-$EndComp
-$Comp
-L ESP8266:Custom_LOLIN_V3 U2
+L Conductivity_Sensor_V1-rescue:Custom_LOLIN_V3-ESP8266 U2
 U 1 1 62643FD1
 P 1650 5200
 F 0 "U2" H 1625 6115 50  0000 C CNN
@@ -171,21 +160,8 @@ F 3 "~" H 3500 2300 50  0001 C CNN
 	1    3500 2300
 	0    1    1    0   
 $EndComp
-$Comp
-L Connector_Generic:Conn_01x01 J3
-U 1 1 62656342
-P 4150 2300
-F 0 "J3" V 4022 2380 50  0000 L CNN
-F 1 "Test pad GND" V 4113 2380 50  0000 L CNN
-F 2 "TestPoint:TestPoint_Pad_4.0x4.0mm" H 4150 2300 50  0001 C CNN
-F 3 "~" H 4150 2300 50  0001 C CNN
-	1    4150 2300
-	0    1    1    0   
-$EndComp
 Text GLabel 3500 2100 1    50   Input ~ 0
 REGULATED_5V+
-Text GLabel 4150 2100 1    50   Input ~ 0
-GND
 $Comp
 L Connector_Generic:Conn_01x01 J4
 U 1 1 62657918
@@ -243,62 +219,6 @@ Text GLabel 1250 5950 0    50   Input ~ 0
 REGULATED_5V+
 Text GLabel 1250 5850 0    50   Input ~ 0
 GND
-Text GLabel 3750 5950 0    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 3750 5850 0    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 3750 5750 0    50   Input ~ 0
-GND
-Text GLabel 3750 5250 0    50   Input ~ 0
-REGULATED_5V+
-Wire Wire Line
-	3750 4450 3700 4450
-Wire Wire Line
-	3750 4350 3700 4350
-$Comp
-L Device:R R4
-U 1 1 62661B0A
-P 3400 4450
-F 0 "R4" V 3607 4450 50  0000 C CNN
-F 1 "10K" V 3516 4450 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3330 4450 50  0001 C CNN
-F 3 "~" H 3400 4450 50  0001 C CNN
-	1    3400 4450
-	0    -1   -1   0   
-$EndComp
-$Comp
-L Device:R R3
-U 1 1 62661FCA
-P 3400 4350
-F 0 "R3" V 3193 4350 50  0000 C CNN
-F 1 "10K" V 3284 4350 50  0000 C CNN
-F 2 "Resistor_THT:R_Axial_DIN0309_L9.0mm_D3.2mm_P12.70mm_Horizontal" V 3330 4350 50  0001 C CNN
-F 3 "~" H 3400 4350 50  0001 C CNN
-	1    3400 4350
-	0    1    1    0   
-$EndComp
-Text GLabel 3250 4450 0    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 3250 4350 0    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 4450 4050 1    50   Input ~ 0
-REGULATED_5V+
-Text GLabel 4450 6250 3    50   Input ~ 0
-GND
-Text GLabel 3700 4200 1    50   Input ~ 0
-SDA
-Text GLabel 3700 4600 3    50   Input ~ 0
-SCL
-Wire Wire Line
-	3700 4200 3700 4350
-Connection ~ 3700 4350
-Wire Wire Line
-	3700 4350 3550 4350
-Wire Wire Line
-	3700 4600 3700 4450
-Connection ~ 3700 4450
-Wire Wire Line
-	3700 4450 3550 4450
 $Comp
 L Device:C C3
 U 1 1 62664AC2
@@ -566,8 +486,6 @@ $EndComp
 Wire Wire Line
 	10400 5850 10500 5850
 Wire Wire Line
-	9900 5950 10400 5950
-Wire Wire Line
 	9600 5850 9600 5950
 Wire Wire Line
 	9600 5950 9900 5950
@@ -576,13 +494,8 @@ Wire Wire Line
 Connection ~ 9600 5850
 Wire Wire Line
 	9600 5850 9900 5850
-Connection ~ 9900 5950
 Text GLabel 10400 5950 3    50   Input ~ 0
 OUT1
-Wire Wire Line
-	9900 5850 10400 5850
-Connection ~ 9900 5850
-Connection ~ 10400 5850
 Text GLabel 2000 4950 2    50   Input ~ 0
 LED1
 Text GLabel 2000 5250 2    50   Input ~ 0

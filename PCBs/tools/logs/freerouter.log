@@ -1,0 +1,84 @@
+2022-04-29 07:18:45.185 [main] INFO  Freerouting v1.5.0 (build-date: 2022-01-27)
+2022-04-29 07:18:46.199 [main] TRACE Method 'MainApplication.main()' was performed in 1.17 seconds.
+2022-04-29 07:20:07.701 [AWT-EventQueue-0] INFO  Opening 'Conductivity_Sensor_V1.dsn'...
+2022-04-29 07:20:09.777 [AWT-EventQueue-0] INFO  Opening 'Conductivity_Sensor_V1.rules'...
+2022-04-29 07:20:09.780 [AWT-EventQueue-0] ERROR File 'Conductivity_Sensor_V1.rules' was not found.
+2022-04-29 07:20:27.040 [Thread-0] INFO  Starting auto-routing...
+2022-04-29 07:20:30.026 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #1 on board 'ab744a706dd58d2ba208c5f8c06bd74c' making 91 changes' was performed in 2.81 seconds.
+2022-04-29 07:20:31.281 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #2 on board 'c80fc723f8d5078074ec404199363e9a' making 39 changes' was performed in 1.16 seconds.
+2022-04-29 07:20:31.651 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #3 on board '486a6578724babac69e5c2aaecd83817' making 13 changes' was performed in 0.34 seconds.
+2022-04-29 07:20:31.796 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #4 on board 'd104345579b0cdd5af5ce4344a6fbc5b' making 3 changes' was performed in 0.12 seconds.
+2022-04-29 07:20:31.832 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #5 on board '77ade26b488da97f924352842c5347b3' making 0 changes' was performed in 0.01 seconds.
+2022-04-29 07:20:31.834 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()-autorouting' was performed in 4.79 seconds.
+2022-04-29 07:20:31.836 [Thread-0] INFO  Auto-routing was completed in 4.79 seconds.
+2022-04-29 07:20:31.840 [Thread-0] INFO  Starting route optimization on 15 threads...
+2022-04-29 07:20:34.560 [Thread-0] TRACE Method 'BatchOptRouteMT.opt_route_pass #1 with 0 items, 4 vias and 1,665,069.06 trace length running on 15 threads.' was performed in 2.65 seconds.
+2022-04-29 07:20:35.956 [Thread-0] TRACE Method 'BatchOptRouteMT.opt_route_pass #2 with 58 items, 3 vias and 1,686,234.21 trace length running on 15 threads.' was performed in 1.39 seconds.
+2022-04-29 07:20:37.282 [Thread-0] TRACE Method 'BatchOptRouteMT.opt_route_pass #3 with 57 items, 2 vias and 1,667,485.14 trace length running on 15 threads.' was performed in 1.32 seconds.
+2022-04-29 07:20:37.285 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()-routeoptimization' was performed in 5.44 seconds.
+2022-04-29 07:20:37.297 [Thread-0] INFO  Route optimization was completed in 5.44 seconds and it improved the design by ~50.01%.
+2022-04-29 07:20:37.324 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()' was performed in 10.28 seconds.
+2022-04-29 07:20:45.793 [AWT-EventQueue-0] INFO  Saving 'C:\Users\micha\Documents\_CRI\_IGEM_2022\_HARDWARE\_HARDWARE\PCBs\Conductivity_Sensor\Conductivity_Sensor_V1\Conductivity_Sensor_V1_with_transistor\Conductivity_Sensor_V1.bin'...
+2022-04-29 07:21:31.776 [main] INFO  Freerouting v1.5.0 (build-date: 2022-01-27)
+2022-04-29 07:21:32.559 [main] TRACE Method 'MainApplication.main()' was performed in 0.87 seconds.
+2022-04-29 07:22:33.380 [main] INFO  Freerouting v1.5.0 (build-date: 2022-01-27)
+2022-04-29 07:22:34.170 [main] TRACE Method 'MainApplication.main()' was performed in 0.88 seconds.
+2022-04-29 07:22:41.736 [AWT-EventQueue-0] INFO  Opening 'Conductivity_Sensor_V1.dsn'...
+2022-04-29 07:22:42.965 [AWT-EventQueue-0] INFO  Opening 'Conductivity_Sensor_V1.rules'...
+2022-04-29 07:22:42.968 [AWT-EventQueue-0] ERROR File 'Conductivity_Sensor_V1.rules' was not found.
+2022-04-29 07:22:50.833 [main] INFO  Freerouting v1.5.0 (build-date: 2022-01-27)
+2022-04-29 07:22:51.620 [main] TRACE Method 'MainApplication.main()' was performed in 0.90 seconds.
+2022-04-29 07:22:53.788 [AWT-EventQueue-0] INFO  Opening 'Conductivity_Sensor_V1.dsn'...
+2022-04-29 07:22:55.119 [AWT-EventQueue-0] INFO  Opening 'Conductivity_Sensor_V1.rules'...
+2022-04-29 07:22:55.122 [AWT-EventQueue-0] ERROR File 'Conductivity_Sensor_V1.rules' was not found.
+2022-04-29 07:22:58.299 [Thread-0] INFO  Starting auto-routing...
+2022-04-29 07:23:01.373 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #1 on board 'ab744a706dd58d2ba208c5f8c06bd74c' making 91 changes' was performed in 2.89 seconds.
+2022-04-29 07:23:02.354 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #2 on board 'c80fc723f8d5078074ec404199363e9a' making 39 changes' was performed in 0.93 seconds.
+2022-04-29 07:23:02.713 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #3 on board '486a6578724babac69e5c2aaecd83817' making 13 changes' was performed in 0.33 seconds.
+2022-04-29 07:23:02.876 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #4 on board 'd104345579b0cdd5af5ce4344a6fbc5b' making 3 changes' was performed in 0.13 seconds.
+2022-04-29 07:23:02.908 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #5 on board '77ade26b488da97f924352842c5347b3' making 0 changes' was performed in 0.01 seconds.
+2022-04-29 07:23:02.909 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()-autorouting' was performed in 4.61 seconds.
+2022-04-29 07:23:02.911 [Thread-0] INFO  Auto-routing was completed in 4.61 seconds.
+2022-04-29 07:23:02.915 [Thread-0] INFO  Starting route optimization on 15 threads...
+2022-04-29 07:23:04.760 [Thread-0] TRACE Method 'BatchOptRouteMT.opt_route_pass #1 with 0 items, 4 vias and 1,665,069.06 trace length running on 15 threads.' was performed in 1.82 seconds.
+2022-04-29 07:23:06.081 [Thread-0] TRACE Method 'BatchOptRouteMT.opt_route_pass #2 with 58 items, 3 vias and 1,685,626.15 trace length running on 15 threads.' was performed in 1.32 seconds.
+2022-04-29 07:23:07.156 [Thread-0] TRACE Method 'BatchOptRouteMT.opt_route_pass #3 with 56 items, 2 vias and 1,667,346.92 trace length running on 15 threads.' was performed in 1.07 seconds.
+2022-04-29 07:23:07.159 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()-routeoptimization' was performed in 4.24 seconds.
+2022-04-29 07:23:07.165 [Thread-0] INFO  Route optimization was completed in 4.24 seconds and it improved the design by ~50.04%.
+2022-04-29 07:23:07.194 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()' was performed in 8.89 seconds.
+2022-04-29 07:23:09.237 [AWT-EventQueue-0] INFO  Saving 'Conductivity_Sensor_V1.ses'...
+2022-04-29 07:23:11.760 [AWT-EventQueue-0] INFO  Saving 'Conductivity_Sensor_V1.rules'...
+2022-04-29 07:36:38.312 [AWT-EventQueue-0] INFO  Opening 'Conductivity_Sensor_V1.dsn'...
+2022-04-29 07:36:39.084 [AWT-EventQueue-0] INFO  Opening 'Conductivity_Sensor_V1.rules'...
+2022-04-29 07:36:42.353 [Thread-46] INFO  Starting auto-routing...
+2022-04-29 07:36:44.002 [Thread-46] TRACE Method 'BatchAutorouter.autoroute_pass #5 on board '426126cb1c584702ce3415be6fca4311' making 111 changes' was performed in 1.63 seconds.
+2022-04-29 07:36:44.020 [Thread-46] TRACE Method 'BatchAutorouter.autoroute_pass #6 on board '721e908128219c7ad721e5cfde571cf4' making 0 changes' was performed in 0.01 seconds.
+2022-04-29 07:36:44.021 [Thread-46] TRACE Method 'BatchAutorouterThread.thread_action()-autorouting' was performed in 1.67 seconds.
+2022-04-29 07:36:44.022 [Thread-46] INFO  Auto-routing was completed in 1.67 seconds.
+2022-04-29 07:36:44.024 [Thread-46] INFO  Starting route optimization on 15 threads...
+2022-04-29 07:36:46.098 [Thread-46] TRACE Method 'BatchOptRouteMT.opt_route_pass #1 with 0 items, 7 vias and 1,741,217.20 trace length running on 15 threads.' was performed in 2.07 seconds.
+2022-04-29 07:36:47.676 [Thread-46] TRACE Method 'BatchOptRouteMT.opt_route_pass #2 with 58 items, 4 vias and 1,749,665.15 trace length running on 15 threads.' was performed in 1.57 seconds.
+2022-04-29 07:36:49.365 [Thread-46] TRACE Method 'BatchOptRouteMT.opt_route_pass #3 with 58 items, 3 vias and 1,713,325.12 trace length running on 15 threads.' was performed in 1.69 seconds.
+2022-04-29 07:36:49.368 [Thread-46] TRACE Method 'BatchAutorouterThread.thread_action()-routeoptimization' was performed in 5.34 seconds.
+2022-04-29 07:36:49.370 [Thread-46] INFO  Route optimization was completed in 5.34 seconds and it improved the design by ~51.10%.
+2022-04-29 07:36:49.388 [Thread-46] TRACE Method 'BatchAutorouterThread.thread_action()' was performed in 7.03 seconds.
+2022-04-29 07:36:53.464 [AWT-EventQueue-0] INFO  Saving 'Conductivity_Sensor_V1.ses'...
+2022-04-29 07:36:54.437 [AWT-EventQueue-0] INFO  Saving 'Conductivity_Sensor_V1.rules'...
+2022-04-29 07:39:25.595 [main] INFO  Freerouting v1.5.0 (build-date: 2022-01-27)
+2022-04-29 07:39:26.280 [main] TRACE Method 'MainApplication.main()' was performed in 0.78 seconds.
+2022-04-29 07:39:28.899 [AWT-EventQueue-0] INFO  Opening 'LED_BOARD_V1.dsn'...
+2022-04-29 07:39:30.285 [AWT-EventQueue-0] INFO  Opening 'LED_BOARD_V1.rules'...
+2022-04-29 07:39:30.288 [AWT-EventQueue-0] ERROR File 'LED_BOARD_V1.rules' was not found.
+2022-04-29 07:39:32.833 [Thread-0] INFO  Starting auto-routing...
+2022-04-29 07:39:33.972 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #1 on board '9f2c7acef535540fc1bc8b076099123c' making 32 changes' was performed in 0.98 seconds.
+2022-04-29 07:39:34.087 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #2 on board '761787117fae198579aebc54d4a96903' making 2 changes' was performed in 0.07 seconds.
+2022-04-29 07:39:34.113 [Thread-0] TRACE Method 'BatchAutorouter.autoroute_pass #3 on board 'a8361a1024fbec2080ac305cff584c3c' making 0 changes' was performed in 0.00 seconds.
+2022-04-29 07:39:34.115 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()-autorouting' was performed in 1.28 seconds.
+2022-04-29 07:39:34.116 [Thread-0] INFO  Auto-routing was completed in 1.28 seconds.
+2022-04-29 07:39:34.121 [Thread-0] INFO  Starting route optimization on 15 threads...
+2022-04-29 07:39:34.867 [Thread-0] TRACE Method 'BatchOptRouteMT.opt_route_pass #1 with 0 items, 1 vias and 630,745.38 trace length running on 15 threads.' was performed in 0.73 seconds.
+2022-04-29 07:39:34.869 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()-routeoptimization' was performed in 0.75 seconds.
+2022-04-29 07:39:34.874 [Thread-0] INFO  Route optimization was completed in 0.75 seconds and it improved the design by ~0.29%.
+2022-04-29 07:39:34.901 [Thread-0] TRACE Method 'BatchAutorouterThread.thread_action()' was performed in 2.07 seconds.
+2022-04-29 07:39:38.826 [AWT-EventQueue-0] INFO  Saving 'LED_BOARD_V1.ses'...
+2022-04-29 07:39:40.050 [AWT-EventQueue-0] INFO  Saving 'LED_BOARD_V1.rules'...

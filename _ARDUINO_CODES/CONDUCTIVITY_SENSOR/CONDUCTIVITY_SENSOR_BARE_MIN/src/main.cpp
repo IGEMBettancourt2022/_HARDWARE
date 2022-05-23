@@ -44,8 +44,9 @@ int ne555 = 13; //attach to the third pin of NE555
 // unsigned long duration2; //the variable to store the HIGH length of the pulse
 // unsigned long dc;                //the variable to store the duty cycle
 
-bool light_sensor_on = false;
-bool timer_sensing_on = true;
+bool light_sensor_on = true;
+bool timer_sensing_on = false;
+bool stupid_blink = false;
 
 int transistor_pin = 0;
 
@@ -55,6 +56,13 @@ float dc;
 int Samplin_quantity = 10;
 int delay_between_sanples = 500;
 int delay_between_round = 1000;
+
+// int LED1 = 16;
+int LED2 = 14;
+int LED3 = 12;
+int LED4 = 15;
+int LED5 = 10;
+// int LED6 = 9;
 
 // Declaration for an SSD1306 display connected to I2C (SDA, SCL pins)
 #define OLED_RESET -1 // Reset pin # (or -1 if sharing Arduino reset pin)
@@ -369,7 +377,20 @@ void initialize()
   display.clearDisplay();
 
   pinMode(ledPin, OUTPUT);
+  // pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(LED4, OUTPUT);
+  pinMode(LED5, OUTPUT);
+  // pinMode(LED6, OUTPUT);
+
   digitalWrite(ledPin, LOW);
+  // digitalWrite(LED1, LOW);
+  digitalWrite(LED2, LOW);
+  digitalWrite(LED3, LOW);
+  digitalWrite(LED4, LOW);
+  digitalWrite(LED5, LOW);
+  // digitalWrite(LED6, LOW);
 
   //if specific IP address on network address
   /*
@@ -466,6 +487,29 @@ void loop()
   // digitalWrite(transistor_pin, LOW);
   // delay(1000);
 
+  if (stupid_blink)
+  { 
+    // Serial.println("in");
+    // digitalWrite(LED1, LOW);
+    digitalWrite(LED2, LOW);
+    digitalWrite(LED3, LOW);
+    digitalWrite(LED4, LOW);
+    digitalWrite(LED5, LOW);
+    // digitalWrite(LED6, LOW);
+
+    delay(1000);
+    // Serial.println("out");
+
+    // digitalWrite(LED1, HIGH);
+    digitalWrite(LED2, HIGH);
+    digitalWrite(LED3, HIGH);
+    digitalWrite(LED4, HIGH);
+    digitalWrite(LED5, HIGH);
+    // digitalWrite(LED6, HIGH);
+    
+    delay(1000);
+  }
+
   if (timer_sensing_on)
   {
     ///////////Electrical conductivity test/////////////
@@ -508,10 +552,18 @@ void loop()
   if (light_sensor_on)
   {
     // ///////////Electrical conductivity test/////////////
-
+    digitalWrite(LED4, HIGH);
+    delay(100);
     //OPT101 value
     opt101_Value = analogRead(analogInPin);
     Serial.println("o," + String(opt101_Value));
+    delay(100);
+    digitalWrite(LED4, LOW);
+    delay(1000);
+    //OPT101 value
+    opt101_Value = analogRead(analogInPin);
+    Serial.println("v," + String(opt101_Value));
+    delay(1000);
     // message = "";
     // message = "o,";
     // message = message+ String(opt101_Value, 2);
